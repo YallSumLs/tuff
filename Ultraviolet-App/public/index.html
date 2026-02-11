@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<title>Tuff Browser | Web Proxy</title>
+		<meta name="description" content="Browse the web freely and anonymously with Tuff Browser - powered by Ultraviolet technology" />
+		<meta name="keywords" content="proxy, web proxy, ultraviolet, unblock websites, free web proxy, bypass filters" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#667eea" />
+		<meta name="googlebot" content="index, follow, snippet" />
+		<link rel="shortcut icon" content="favicon.ico" />
+		<link rel="stylesheet" href="index.css" />
+		
+		<script src="baremux/index.js"></script>
+		<script src="uv/uv.bundle.js"></script>
+		<script src="uv/uv.config.js"></script>
+	</head>
+
+	<body>
+		<!-- Animated Background -->
+		<div class="background">
+			<div class="gradient-orb orb-1"></div>
+			<div class="gradient-orb orb-2"></div>
+			<div class="gradient-orb orb-3"></div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="container">
+			<!-- Logo Section -->
+			<div class="logo-section">
+				<div class="logo-container">
+					<svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+								<stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+								<stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+							</linearGradient>
+						</defs>
+						<circle cx="50" cy="50" r="45" fill="url(#logo-gradient)" opacity="0.2"/>
+						<path d="M 30 50 Q 50 20, 70 50 T 70 50" stroke="url(#logo-gradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+						<circle cx="50" cy="50" r="8" fill="url(#logo-gradient)"/>
+					</svg>
+					<h1 class="site-title">
+						<span class="title-gradient">Tuff</span>
+					</h1>
+				</div>
+				<p class="subtitle">Browse the web freely, fast, and anonymously</p>
+			</div>
+
+			<!-- Search Form -->
+			<form id="uv-form" class="search-form">
+				<input
+					id="uv-search-engine"
+					value="https://www.google.com/search?q=%s"
+					type="hidden"
+				/>
+				<div class="search-container">
+					<svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<input 
+						id="uv-address" 
+						type="text" 
+						placeholder="Enter URL or search..." 
+						autocomplete="off"
+						spellcheck="false"
+					/>
+					<button type="submit" class="go-button">
+						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+				</div>
+			</form>
+
+			<!-- Error Display -->
+			<div class="error-container">
+				<p id="uv-error"></p>
+				<pre id="uv-error-code"></pre>
+			</div>
+
+			<!-- Quick Links -->
+			<div class="quick-links">
+				<a href="#" class="quick-link" data-url="https://google.com">
+					<div class="quick-link-icon">🔍</div>
+					<span>Google</span>
+				</a>
+				<a href="#" class="quick-link" data-url="https://youtube.com">
+					<div class="quick-link-icon">📺</div>
+					<span>YouTube</span>
+				</a>
+				<a href="#" class="quick-link" data-url="https://discord.com">
+					<div class="quick-link-icon">💬</div>
+					<span>Discord</span>
+				</a>
+				<a href="#" class="quick-link" data-url="https://reddit.com">
+					<div class="quick-link-icon">🌐</div>
+					<span>Reddit</span>
+				</a>
+				<a href="#" class="quick-link" data-url="https://github.com">
+					<div class="quick-link-icon">💻</div>
+					<span>GitHub</span>
+				</a>
+				<a href="#" class="quick-link" data-url="https://twitter.com">
+					<div class="quick-link-icon">🐦</div>
+					<span>Twitter</span>
+				</a>
+			</div>
+
+			<!-- Features -->
+			<div class="features">
+				<div class="feature">
+					<div class="feature-icon">🔒</div>
+					<div class="feature-text">
+						<h3>Secure</h3>
+						<p>Encrypted connection</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="feature-icon">⚡</div>
+					<div class="feature-text">
+						<h3>Fast</h3>
+						<p>Optimized performance</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="feature-icon">🌍</div>
+					<div class="feature-text">
+						<h3>Unrestricted</h3>
+						<p>Access any website</p>
+					</div>
+				</div>
+				<div class="feature">
+					<div class="feature-icon">🎭</div>
+					<div class="feature-text">
+						<h3>Private</h3>
+						<p>No logs or tracking</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="footer-links">
+				<a href="https://github.com/titaniumnetwork-dev" target="_blank">GitHub</a>
+				<span class="separator">•</span>
+				<a href="https://discord.gg/unblock" target="_blank">Discord</a>
+				<span class="separator">•</span>
+				<a href="credits.html">Credits</a>
+			</div>
+			<div class="footer-text">
+				<span>Powered by Ultraviolet</span>
+			</div>
+		</footer>
+
+		<!-- Proxy Frame -->
+		<iframe style="display: none" id="uv-frame"></iframe>
+
+		<!-- Scripts -->
+		<script src="register-sw.js"></script>
+		<script src="search.js"></script>
+		<script src="index.js"></script>
+
+		<!-- Quick Links Handler -->
+		<script>
+			document.querySelectorAll('.quick-link').forEach(link => {
+				link.addEventListener('click', (e) => {
+					e.preventDefault();
+					const url = e.currentTarget.getAttribute('data-url');
+					document.getElementById('uv-address').value = url;
+					document.getElementById('uv-form').dispatchEvent(new Event('submit'));
+				});
+			});
+		</script>
+	</body>
+</html>
